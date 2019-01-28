@@ -1,0 +1,52 @@
+mongod --directoryperdb --dbpath D:\InstalledSoftwares\MongoDB\Server\4.0\data\db --logpath D:\InstalledSoftwares\MongoDB\Server\4.0\log --logappend --install
+
+mongod --- in 1 cmd
+mongo -- in other cmd
+
+====================================================================================
+use db_name #creates the database
+show dbs ## show the list of dbs
+====================================================================================
+
+db.createUser({
+	user:"kaushik",
+	pwd:"1234",
+	roles:['readWrite','dbAdmin']
+});
+
+====================================================================================
+db.createCollection('login_Collection')
+show collections
+
+db.login_Collection.insert({
+	username:"spiderman",
+	first_name:"john",
+	last_name:"john",
+	password:"123456789"
+});
+db.login_Collection.insert({
+	username:"batman",
+	first_name:"john",
+	last_name:"john",
+	password:"123456789"
+});
+====================================================================================
+db.login_Collection.find().pretty()    #### to show the list of the collection
+db.login_Collection.find()    #### to show the list of the collection
+
+db.login_Collection.update({first_name:"spiderman"},{first_name:"spiderman",last_name:"batmana"});
+######## in the above command we are overrriding the entire field
+
+we can use the set to add the value or update a single specific value
+db.login_Collection.update({first_name:"spiderman"},{$set:{last_name:"batmana"}});
+
+
+
+db.login_Collection.update({first_name:"spiderman"},{$inc:{age:5}});
+
+##### to remove a field
+db.login_Collection.update({first_name:"spiderman"},{$unset:{last_name:"batmana"}});
+
+
+
+

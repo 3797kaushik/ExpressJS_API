@@ -1,0 +1,23 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "the module for checking the login",
+  "main": "index.js",
+  "scripts": {
+    "test": "login"
+  },
+  "start": "nodemon server.js",
+  "keywords": [
+    "RESTful",
+    "API"
+  ],
+  "author": "kaushik",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.4"
+  }
+}

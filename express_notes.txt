@@ -1,0 +1,17 @@
+mkdir expressApi
+cd expressApi
+
+npm init --yes
+npm i express
+
+node index.js                        //// run node server
+npm i -g nodemon			/// install nodemon package
+
+nodemon index.js			///  run server continously if there is change it will reflect
+npm install mongodb
+
+
+
+
+
+for command prompt history ------ f7   doskey /history
